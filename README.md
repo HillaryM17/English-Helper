@@ -49,6 +49,13 @@ https://stephdavid.github.io/English-Helper/
 
 ### Process
 
+* The project group agreed on a project to look up the definition of an English word and then pronounce that word, using the APIs https://rapidapi.com/dpventures/api/wordsapi/ and https://rapidapi.com/voicerss/api/text-to-speech-1/ 
+* Steph agreed to set up the GitHub repo and Project, and within the project create the necessary Tasks
+* Steph, Jeff and Matt discussed how the changes would be made to the Main repo. We agreed that branches could be used.
+* Steph set up the English-Helper repo, to add collaborators to the repo their GitHub user names are required. Steph asked for these in Slack
+* Jeff agreed to create mockup page to be presented in Figma
+* Steph proposed in Slack that, as a measure of organization, when a developer wants to merge their branch to the main branch, they create a "pull request", and another one of us can accept that pull request.
+
 ---
 
 ### References
