@@ -1,1 +1,3 @@
-//Backend
+$(".search-button").on("click", function () {
+  console.log("search!");
+});
