@@ -1,12 +1,14 @@
+var searchInput = $("#search");
+var wordDefinitionArea = $(".definition"); // to be amended 
+var wordPronunciationArea = $("#audio");
+var wordExamples = $("#examples");
+var historyContainer = $(".previous-searches"); 
+var searchButton = $("#search-button"); 
+var history = [];
+var favourites = [];
 
 
-
-// Hello World!
-
-  
-
-//text to speech API
-const speechURL = 'https://voicerss-text-to-speech.p.rapidapi.com/?key=%3CREQUIRED%3E&src=Hello%2C%20world!&hl=en-us&r=0&c=mp3&f=8khz_8bit_mono';
+const speechURL = "https://voicerss-text-to-speech.p.rapidapi.com/?key=171ec3cab6f247b4b6e7f596d9171ae7&src=" + searchWord + "&hl=en-us&r=0&c=mp3&f=8khz_8bit_mono";
 const speechOptions = {
 	method: 'GET',
 	headers: {
@@ -14,7 +16,8 @@ const speechOptions = {
 		'X-RapidAPI-Host': 'voicerss-text-to-speech.p.rapidapi.com'
 	}
 };
-const wordsURL = 'https://wordsapiv1.p.rapidapi.com/words/incredible/definitions';
+
+const wordsURL = "https://wordsapiv1.p.rapidapi.com/words/" + searchWord + "/definitions";
 const wordsOptions = {
 	method: 'GET',
 	headers: {
