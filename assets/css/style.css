@@ -1,5 +1,7 @@
 :root {
   --primary: #001d51;
+  --secondary: #d9d9d9;
+  --tertiary: #e3e7ed;
 }
 
 h1,
@@ -20,12 +22,14 @@ header {
   margin: 0;
   padding: 0;
 }
-i {
+
+header i {
   position: absolute;
   font-size: 3rem;
   padding-left: 20px;
   color: var(--primary);
 }
+
 body {
   margin: 0;
 }
@@ -45,4 +49,13 @@ nav a {
   font-size: 3rem;
   background: white;
   color: var(--primary);
+}
+
+.previous-searches {
+  background-color: var(--tertiary);
+}
+
+.search-history-item {
+  color: var(--primary);
+  background-color: var(--secondary);
 }
