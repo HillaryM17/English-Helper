@@ -1,4 +1,5 @@
-var searchInput = "Hello"; //$("#search");
+var searchInputText = "Hello";
+var searchInputElement = $("#search");
 var wordDefinitionArea = $(".definition");
 var wordPronunciationArea = $("#audio");
 var wordExamples = $("#examples");
@@ -8,7 +9,7 @@ var history = [];
 var favourites = [];
 
 
-const speechURL = "https://voicerss-text-to-speech.p.rapidapi.com/?key=171ec3cab6f247b4b6e7f596d9171ae7&src=" + searchInput + "&hl=en-us&r=0&c=mp3&f=8khz_8bit_mono";
+const speechURL = "https://voicerss-text-to-speech.p.rapidapi.com/?key=171ec3cab6f247b4b6e7f596d9171ae7&src=" + searchInputText + "&hl=en-us&r=0&c=mp3&f=8khz_8bit_mono";
 const speechOptions = {
 	method: 'GET',
 	headers: {
@@ -17,7 +18,7 @@ const speechOptions = {
 	}
 };
 
-const wordsURL = "https://wordsapiv1.p.rapidapi.com/words/" + searchInput + "/definitions";
+const wordsURL = "https://wordsapiv1.p.rapidapi.com/words/" + searchInputText + "/definitions";
 const wordsOptions = {
 	method: 'GET',
 	headers: {
