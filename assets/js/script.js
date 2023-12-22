@@ -37,15 +37,29 @@ const wordsOptions = {
          fetch(wordsURL, wordsOptions).then(function(response){
             return response.json()
          }) .then(function(data){
-            console.log("words data: ",data);
+            
+
+            console.log(data.definitions[0].definition);
          })
 
-    
+    var audio = new AudioContext()
          fetch(speechURL, speechOptions).then(function(response){
-            console.log(response)           
-        })
+            return response
+         }) .then(function(data){ 
+            data=> data.arrayBuffer()})
+            //console.log(arrayBuffer))
+            .then(arrayBuffer => audio.decodeAudioData(arrayBuffer))
+            .then(decodedAudio => {
+               audio = decodedAudio;
+               //console.log(audio);
+            })
+
+        };
     
-  };
+         //validateResponse(data)
+         //addHistoryItem(word)
+         //renderWord()
+  
 
   onsearch();
 
